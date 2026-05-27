@@ -14,31 +14,47 @@
 'foo.oof'     Name.Attribute
 ':'           Operator
 ' '           Text.Whitespace
-'\\\n    bar=baz; \\\n    asdf' Literal.String
+'\\\n'        Literal.String.Escape
+
+'    '        Text.Whitespace
+'bar=baz; '   Literal.String
+'\\\n'        Literal.String.Escape
+
+'    '        Text.Whitespace
+'asdf'        Literal.String
 '\n'          Text.Whitespace
 
 '\n'          Text.Whitespace
 
-'// comment'  Comment
+'// comment'  Comment.Single
 '\n'          Text.Whitespace
 
-'# comment'   Comment
+'# comment'   Comment.Single
 '\n'          Text.Whitespace
 
-'; comment'   Comment
+';'           Name.Attribute
+' '           Text.Whitespace
+'comment'     Literal.String
 '\n'          Text.Whitespace
 
 '\n'          Text.Whitespace
 
 'x'           Name.Attribute
 ':'           Operator
-'a\\\nb'      Literal.String
+'a'           Literal.String
+'\\\n'        Literal.String.Escape
+
+'b'           Literal.String
 '\n'          Text.Whitespace
 
 'x'           Name.Attribute
 ':'           Operator
 ' '           Text.Whitespace
-'a \\\n  b'   Literal.String
+'a '          Literal.String
+'\\\n'        Literal.String.Escape
+
+'  '          Text.Whitespace
+'b'           Literal.String
 '\n'          Text.Whitespace
 
 '\n'          Text.Whitespace
@@ -47,4 +63,4 @@
 ' '           Text.Whitespace
 '='           Operator
 ' '           Text.Whitespace
-'\\\n'        Literal.String
+'\\\n'        Literal.String.Escape
